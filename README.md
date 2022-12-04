@@ -1,4 +1,4 @@
-#Loja de conveniência usando Árvores Binárias
+## Loja de conveniência usando Árvores Binárias
 
 Estrutura do tipo Árvore Binária de Busca para armazenar produtos de uma loja de conveniência.
 
