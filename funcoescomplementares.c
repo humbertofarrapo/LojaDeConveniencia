@@ -88,36 +88,36 @@ int validarsenha(char senha[])
 }
 
 void telalogin(){
-    char cpf[12];
-    char senha[5];
-    int login_efetuado = 0;
+	char cpf[12];
+    	char senha[5];
+    	int login_efetuado = 0;
 
 	system("clear || cls||cls");
-    while(!login_efetuado)
-    {
-        printf("Digite seu CPF: ");
-        scanf("%s", cpf);
+    	while(!login_efetuado)
+    	{
+        	printf("Digite seu CPF: ");
+        	scanf("%s", cpf);
 
-        printf("Digite seu senha de 4 dígitos: ");
-        scanf("%s", senha);
+        	printf("Digite seu senha de 4 dígitos: ");
+        	scanf("%s", senha);
 
-        if (validarcpf(cpf) == 1 && validarsenha(senha) == 1)
+        	if(validarcpf(cpf) == 1 && validarsenha(senha) == 1)
 		{
 			system("clear || cls");
-            printf("Login efetuado com sucesso! :)\n\n");
-            login_efetuado = 1;
-        }
-        else
+            		printf("Login efetuado com sucesso! :)\n\n");
+            		login_efetuado = 1;
+        	}
+        	else
 		{	
 			system("clear || cls");
-            printf("DADOS INVALIDOS!\n\n");    
+            		printf("DADOS INVALIDOS!\n\n");    
 		}
 	}
 }
 
 void opArvBin()//editar o menu
 {
-    printf("**************BEM VINDO**************\n\n");
+	printf("**************BEM VINDO**************\n\n");
 	printf("1. \n");
 	printf("2. \n");
 	printf("3. \n");
