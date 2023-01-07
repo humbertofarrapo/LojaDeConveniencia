@@ -1,8 +1,6 @@
 
 typedef struct Produto* ArvBin;
 
-void
-
 ArvBin* criaArvBin();
 
 void liberaArvBin(ArvBin *raiz);
