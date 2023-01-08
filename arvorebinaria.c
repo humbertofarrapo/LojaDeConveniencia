@@ -20,9 +20,9 @@ Produto* busca (Produto* r, int m)
 {
 	if (r == NULL) 
 		return NULL;
-	else if (r->info > m) 
+	else if (r->matricula > m) 
 		return busca (r->esq, m);
-	else if (r->info < m) 
+	else if (r->matricula < m) 
 		return busca (r->dir, m);
 	else 
 		return r;
@@ -33,13 +33,13 @@ Produto* insere (Produto* a, int m, int t, float p)
 	if (a==NULL)
 	{
 		a = (Produto*)malloc(sizeof(Produto));
-		a->info = m;
+		a->matricula = m;
 		a->esq = a->dir = NULL;
 	}
-	else if (m < a->info)
-		a->esq = insere(a->esq,m);
-	else /* m < a->info */
-		a->dir = insere(a->dir,m);
+	else if (m < a->matricula)
+		a->esq = insere(a->esq,m, t, p);
+	else
+		a->dir = insere(a->dir,m, t, p);
 	return a;
 }
 
@@ -47,31 +47,31 @@ Produto* retira (Produto* r, int m)
 {
 	if (r == NULL)
 		return NULL;
-	else if (r->info > m)
+	else if (r->matricula > m)
 		r->esq = retira(r->esq, m);
-	else if (r->info < m)
+	else if (r->matricula < m)
 		r->dir = retira(r->dir, m);
 	else 
-	{/* achou o elemento */
+	{
 		if (r->esq == NULL && r->dir == NULL) 
-		{ /* elemento sem filhos */
+		{
 			free (r);
 			r = NULL;
 		}
 		else if (r->esq == NULL)
-		{/* só tem filho à direita */
+		{
 			Produto* t = r;
 			r = r->dir;
 			free (t);
 		}
 		else if (r->dir == NULL) 
-		{/* só tem filho à esquerda */
+		{
 			Produto* t = r;
 			r = r->esq;
 			free (t);
 		}
 		else 
-		{/* tem os dois filhos */
+		{
 			Produto* pai = r;
 			Produto* f = r->esq;
 			while (f->dir != NULL) 
@@ -79,9 +79,8 @@ Produto* retira (Produto* r, int m)
 				pai = f;
 				f = f->dir;
 			}
-			r->info = f->info;
-			/* troca as informações */
-			f->info = m;
+			r->matricula = f->matricula;
+			f->matricula = m;
 			r->esq = retira(r->esq,m);
 		}
 	}
@@ -93,7 +92,7 @@ void imprime (Produto* a)
 	if (a != NULL)
 	{
 		imprime(a->esq);
-		printf("%d\n",a->info);
+		printf("%d\n",a->tipo);
 		imprime(a->dir);
 	}
 }
