@@ -4,11 +4,11 @@
 
 struct Produto
 {
-    int matricula;
+    	int matricula;
 	int tipo;
 	float preco;
-    struct Produto *esq;
-    struct Produto *dir;
+    	struct Produto *esq;
+    	struct Produto *dir;
 };
 
 Produto* init()
@@ -59,13 +59,13 @@ Produto* retira (Produto* r, int m)
 			r = NULL;
 		}
 		else if (r->esq == NULL)
-		{/* só tem filho à direita */
+		{/* sÃ³ tem filho Ã  direita */
 			Produto* t = r;
 			r = r->dir;
 			free (t);
 		}
 		else if (r->dir == NULL) 
-		{/* só tem filho à esquerda */
+		{/* sÃ³ tem filho Ã  esquerda */
 			Produto* t = r;
 			r = r->esq;
 			free (t);
@@ -80,7 +80,7 @@ Produto* retira (Produto* r, int m)
 				f = f->dir;
 			}
 			r->info = f->info;
-			/* troca as informações */
+			/* troca as informaÃ§Ãµes */
 			f->info = m;
 			r->esq = retira(r->esq,m);
 		}
