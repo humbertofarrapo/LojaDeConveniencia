@@ -92,7 +92,7 @@ void telalogin(){
     char senha[5];
     int login_efetuado = 0;
 
-	system("clear || cls||cls");
+	system("clear || cls");
     while(!login_efetuado)
     {
         printf("Digite seu CPF: ");
