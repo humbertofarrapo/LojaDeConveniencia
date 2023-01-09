@@ -103,7 +103,7 @@ void imprime (Produto* a)
 	if (a != NULL)
 	{
 		imprime(a->esq);
-		printf("%d\n",a->tipo);
+		printf("TIPO: %d --- MATRICULA: %d --- PRECO: R$ %.2f\n\n", a->tipo, a->matricula, a->preco);
 		imprime(a->dir);
 	}
 }
