@@ -10,6 +10,8 @@ Produto* init();
 
 Produto* busca (Produto* r, int m);
 
+Produto* venda (Produto* r, int m);
+
 Produto* insere (Produto* a, int m, int t, float p);
 
 Produto* retira (Produto* r, int m);
