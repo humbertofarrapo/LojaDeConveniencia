@@ -11,7 +11,7 @@ struct Produto
     	struct Produto *dir;
 };
 
-Produto* init()
+Produto* init ()
 {
 	return NULL;
 }
@@ -85,6 +85,17 @@ Produto* retira (Produto* r, int m)
 		}
 	}
 	return r;
+}
+
+Produto* libera (Produto* a)
+{
+	if (a != NULL)
+	{
+		libera(a->esq);
+		libera(a->dir);
+		free(a);
+	}
+	return NULL;
 }
 
 void imprime (Produto* a)
