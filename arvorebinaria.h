@@ -14,5 +14,7 @@ Produto* insere (Produto* a, int m, int t, float p);
 
 Produto* retira (Produto* r, int m);
 
+Produto* libera (Produto* a);
+
 void imprime (Produto* a);
 
