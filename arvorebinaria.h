@@ -1,6 +1,6 @@
 /******************************************************************
 arvorebinaria.h
-Cabecalhos das funcoes implementadas no modulo arvorebinaria.c ,
+Cabecalhos das funcoes implementadas no modulo arvorebinaria.c,
 que servem para realizar diversas operacoes da arvore.
 ******************************************************************/
 
