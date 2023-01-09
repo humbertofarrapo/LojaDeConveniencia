@@ -6,6 +6,7 @@
 int validarcpf(char cp_f[])
 {
 	int i, j, digito1 = 0, digito2 = 0;
+	
 	if (strlen(cp_f) != 11)
 	{
 		return 0;
@@ -63,6 +64,7 @@ int validarcpf(char cp_f[])
 int validarsenha(char senha[])
 {
 	int invalido = 0, valido = 0;
+	
 	if (strlen(senha) != 4)
 	{
 		invalido = 1;
@@ -88,43 +90,44 @@ int validarsenha(char senha[])
 }
 
 void telalogin(){
-    char cpf[12];
-    char senha[5];
-    int login_efetuado = 0;
+	char cpf[12];
+    	char senha[5];
+    	int login_efetuado = 0;
 
 	system("clear || cls");
-    while(!login_efetuado)
-    {
-        printf("Digite seu CPF: ");
-        scanf("%s", cpf);
+    	while(!login_efetuado)
+    	{
+        	printf("Digite seu CPF: ");
+        	scanf("%s", cpf);
 
-        printf("Digite seu senha de 4 dígitos: ");
-        scanf("%s", senha);
+        	printf("Digite seu senha de 4 dígitos: ");
+        	scanf("%s", senha);
 
-        if (validarcpf(cpf) == 1 && validarsenha(senha) == 1)
+        	if (validarcpf(cpf) == 1 && validarsenha(senha) == 1)
 		{
 			system("clear || cls");
-            printf("Login efetuado com sucesso! :)\n\n");
-            login_efetuado = 1;
-        }
-        else
+            		printf("Login efetuado com sucesso! :)\n\n");
+            		login_efetuado = 1;
+        	}
+        	else
 		{	
 			system("clear || cls");
-            printf("DADOS INVALIDOS!\n\n");    
+            		printf("DADOS INVALIDOS!\n\n");    
 		}
 	}
 }
 
 void opArvBin()
 {
-    printf("**************BEM VINDO**************\n\n");
+	printf("****************************\n");
 	printf("1. INSERIR\n");
 	printf("2. REMOVER\n");
 	printf("3. ALTERAR\n");
 	printf("4. BUSCAR\n");
 	printf("5. VENDER\n");
-	printf("6. RELATORIO POR TIPO\n");
+	printf("6. RELATORIO - TIPO\n");
 	printf("7. RELATORIO DE VENDAS\n");
-	printf("0. SAIR\n\n");
+	printf("0. SAIR\n");
+	printf("****************************\n\n");
 	printf("Opção selecionada: ");
 }
