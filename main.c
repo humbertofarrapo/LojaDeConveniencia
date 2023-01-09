@@ -21,7 +21,16 @@ int main()
 
 		switch (opcao)
 		{
-			case 1://inserir
+			case 1:
+				printf("Digite a matricula do produto a ser inserido: ");
+				scanf("%d", &matricula);
+				printf("Digite o tipo do produto a ser inserido: ");
+				scanf("%d", &tipo);
+				printf("Digite o preco do produto a ser inserido: ");
+				scanf("%f", &preco);
+				p = insere(p, matricula, tipo, preco);
+				system("cls || clear");
+				printf("Produto inserido com sucesso!\n\n");
 				break;
 			case 2://remover
 				break;
