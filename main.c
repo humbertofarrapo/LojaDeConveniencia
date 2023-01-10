@@ -32,7 +32,12 @@ int main()
 				system("cls || clear");
 				printf("Produto inserido com sucesso!\n\n");
 				break;
-			case 2://remover
+			case 2:
+				printf("Digite a matricula do produto a ser removido: ");
+				scanf("%d", &matricula);
+				p = retira(p, matricula);
+				system("cls || clear");
+				printf("Produto removido com sucesso!\n\n");
 				break;
 			case 3://alterar
 				break;
@@ -45,6 +50,7 @@ int main()
 			case 7://vendas
 				break;
 			case 0:
+				libera(p);
 				printf("Até mais!\n");
 				break;
 			default:	
