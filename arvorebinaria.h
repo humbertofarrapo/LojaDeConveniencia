@@ -6,17 +6,14 @@ que servem para realizar diversas operacoes da arvore.
 
 typedef struct produto Produto;
 
-Produto* init();
+Produto* init(); //Inicia a arvore;
 
-Produto* busca (Produto* r, int m);
+Produto* busca (Produto* r, int m); //Realiza a operacao de busca em uma arvore;
 
-Produto* venda (Produto* r, int m);
+Produto* insere (Produto* a, int m, int t, float p); //Realiza a operacao de insercao em uma arvore;
 
-Produto* insere (Produto* a, int m, int t, float p);
+Produto* retira (Produto* r, int m); //Realiza a operacao de remocao em uma arvore;
 
-Produto* retira (Produto* r, int m);
+Produto* libera (Produto* a); //Realiza a operacao de liberacao de uma arvore (no por no);
 
-Produto* libera (Produto* a);
-
-void imprime (Produto* a);
-
+void imprime (Produto* a); //Realiza a operacao de impressao de uma arvore.
