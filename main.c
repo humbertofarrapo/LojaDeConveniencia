@@ -41,7 +41,20 @@ int main()
 				break;
 			case 3://alterar
 				break;
-			case 4://buscar
+			case 4:
+				printf("Digite a matricula do produto a ser buscado: ");
+				scanf("%d", &matricula);
+				if(busca(p, matricula))
+				{
+					system("cls || clear");
+					printf("\nMATRICULA: %d --- TIPO: %d --- PRECO: R$ %.2f\n\n", matricula, tipo, preco);
+				}
+				else
+				{
+					system("cls || clear");
+					printf("Produto nao encontrado!\n\n");
+				}
+				printf("\n");
 				break;
 			case 5://vender
 				break;
